@@ -4,17 +4,18 @@ This is a pizza ordering application that demonstrates SOLID principles and meta
 Getting Started
 To get started, clone this repository and install the dependencies:
 
-bash
-Copy code
-git clone <https://github.com/iamfiscus/solid-priciples-js-pineapple-problem.git>
-cd pizza-app
-npm install
-Usage
+```
+git clone <https://github.com/iamfiscus/solid-priciples-with-js-pineapple-problem.git>
+
+cd solid-priciples-with-js-pineapple-problem
+
+npm installsolid-priciples-with-js-pineapple-problem
+```
 To start the application, run the following command:
 
 
 ``` bash
-npm start
+node main.js
 ```
 
 This will start the application and open it in your default browser. From there, you can order a pizza by selecting the type of pizza, toppings, and delivery method.
