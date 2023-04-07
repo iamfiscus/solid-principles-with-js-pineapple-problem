@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A pizza ordering application that demonstrates SOLID principles and metaprogramming in JavaScript.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "mocha"
@@ -13,7 +14,7 @@
     "metaprogramming",
     "JavaScript"
   ],
-  "author": "Your Name",
+  "author": "Jd Fiscus",
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.21"
