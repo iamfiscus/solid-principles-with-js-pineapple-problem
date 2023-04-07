@@ -83,4 +83,4 @@ const pizza3 = pizzaFactory.createPizza(hawaiian);
 
 // CHALLENGES  -----
 // @TODO Enhancement: Add or remove ingredients from availableIngredients
-// @TODO Enhancment: Add a method to PizzaFactory to create a pizza from a recipe
+// @TODO Enhancement: Add a method to PizzaFactory to create a pizza from a recipe
