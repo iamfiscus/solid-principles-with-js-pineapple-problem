@@ -1,32 +1,32 @@
 const pizzaPlan = {
   dough: {
-    type: "thin",
+    type: "pan",
     ingredients: ["flour", "water", "salt"],
     preparation: "mix ingredients and knead dough",
-    bakingTime: 10
+    bakingTime: 10,
   },
   sauce: {
     type: "red",
     ingredients: ["tomatoes", "olive oil", "garlic"],
     preparation: "mix ingredients and simmer on stove",
-    spreadAmount: 0.5
+    spreadAmount: 0.5,
   },
   cheese: {
     type: "mozzarella",
     ingredients: ["milk", "rennet", "salt"],
     preparation: "heat milk, add rennet and salt, let curdle, and strain curds",
-    spreadAmount: 0.75
+    spreadAmount: 0.75,
   },
   toppings: {
     type: "meat",
     ingredients: ["pepperoni", "sausage"],
     preparation: "slice and cook meats",
-    spreadAmount: 1
+    spreadAmount: 1,
   },
   baking: {
     temperature: 450,
-    duration: 15
-  }
+    duration: 15,
+  },
 };
 
 class PizzaPreparation {
@@ -63,7 +63,9 @@ class PizzaPreparation {
   }
 
   bake() {
-    console.log(`Baking pizza at ${this.pizzaPlan.baking.temperature} degrees for ${this.pizzaPlan.baking.duration} minutes`);
+    console.log(
+      `Baking pizza at ${this.pizzaPlan.baking.temperature} degrees for ${this.pizzaPlan.baking.duration} minutes`
+    );
   }
 }
 

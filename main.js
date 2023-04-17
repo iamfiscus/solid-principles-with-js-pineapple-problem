@@ -44,12 +44,12 @@ export const detroit = {
 };
 
 const tasks = [
-  { task: "mix dough", chef: assistantChef1 },
-  { task: "simmer sauce", chef: assistantChef2 },
-  { task: "shred cheese", chef: assistantChef1 },
-  { task: "slice meats", chef: assistantChef2 },
-  { task: "assemble pizza", chef: headChef },
-  { task: "bake pizza", chef: headChef },
+  { task: "prepareDough", chef: assistantChef1 },
+  { task: "addSauce", chef: assistantChef2 },
+  { task: "addCheese", chef: assistantChef1 },
+  { task: "prepareToppings", chef: assistantChef2 },
+  { task: "assemblePizza", chef: headChef },
+  { task: "bake", chef: headChef },
 ];
 
 const pizza1 = pizzaFactory.createPizza(detroit);

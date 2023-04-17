@@ -51,28 +51,7 @@ export class HeadChef extends Chef {
 
   assignTasks(tasks) {
     tasks.forEach(({ task, chef }) => {
-      switch (task) {
-        case "mix dough":
-          chef.prepareDough();
-          break;
-        case "simmer sauce":
-          chef.addSauce();
-          break;
-        case "shred cheese":
-          chef.addCheese();
-          break;
-        case "slice meats":
-          chef.prepareToppings();
-          break;
-        case "assemble pizza":
-          chef.assemblePizza();
-          break;
-        case "bake pizza":
-          chef.bake();
-          break;
-        default:
-          console.log(`Unknown task: ${task}`);
-      }
+      chef[task]();
     });
   }
 }
