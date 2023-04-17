@@ -43,7 +43,18 @@ export const detroit = {
   },
 };
 
+const tasks = [
+  { task: "mix dough", chef: assistantChef1 },
+  { task: "simmer sauce", chef: assistantChef2 },
+  { task: "shred cheese", chef: assistantChef1 },
+  { task: "slice meats", chef: assistantChef2 },
+  { task: "assemble pizza", chef: headChef },
+  { task: "bake pizza", chef: headChef },
+];
+
 const pizza1 = pizzaFactory.createPizza(detroit);
+
+headChef.assignTasks(tasks); // assigns tasks to assistant chefs
 pizza1.prepare(); // logs "Preparing pizza with flour, water, salt, tomatoes, olive oil, garlic, mozzarella"
 
 const hawaiian = {
