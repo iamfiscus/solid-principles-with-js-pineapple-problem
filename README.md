@@ -1,8 +1,7 @@
 # The Pineapple Problem
-This is a pizza metaphor that demonstrates SOLID principles and metaprogramming in JavaScript.
-![Pizza Slice](/assets/pineapple-problem.png "Pizza Slice")
+This is the Source Code for a [Presentation](https://docs.google.com/presentation/d/1UyJhhxz0SjrF12_0TRCo_qW_-5Wx6kgmzsh3DsNyRRI/edit?usp=sharing) on using pizza metaphor that demonstrates SOLID principles and metaprogramming in JavaScript.
 
-[Presentation](https://docs.google.com/presentation/d/1UyJhhxz0SjrF12_0TRCo_qW_-5Wx6kgmzsh3DsNyRRI/edit?usp=sharing)
+![Pizza Slice](/assets/pineapple-problem.png "Pizza Slice")
 
 ## Getting Started
 To get started, clone this repository and install the dependencies:
