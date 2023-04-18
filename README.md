@@ -17,6 +17,35 @@ To start the application, run the following command:
 ``` bash
 node main.js
 ```
+Expected output
+```
+Alice is supervising:
+- Alice
+- Bob
+- Charlie
+All ingredients for Detroit-style pizza are available!
+Bob is preparing dough as a Assistant Chef
+Charlie is adding sauce as a Assistant Chef
+Bob is adding cheese as a Assistant Chef
+Alice is preparing dough as a Head Chef
+Alice is adding sauce as a Head Chef
+Alice is adding cheese as a Head Chef
+Alice is adding toppings as a Head Chef
+Alice is baking as a Head Chef
+Mixing and kneading dough with flour, water, salt
+Adding sauce made with tomatoes, olive oil, garlic
+Adding cheese made with mozzarella cheese, salt
+Adding toppings: pepperoni, sausage
+Baking pizza at 450 degrees for 15 minutes
+file:///Users/jfiscus/dev/ce/solid-priciples-js-pineapple-problem/pizza.js:66
+      throw new Error(
+            ^
+
+Error: The following ingredients are not available: milk, rennet, spam, pineapple
+    at Object.createPizza (file:///Users/jfiscus/dev/ce/solid-priciples-js-pineapple-problem/pizza.js:66:13)
+    at file:///Users/jfiscus/dev/ce/solid-priciples-js-pineapple-problem/main.js:92:29
+    at ModuleJob.run (node:internal/modules/esm/module_job:193:25)
+```
 
 This will start the application and open it in your default browser. From there, you can order a pizza by selecting the type of pizza, toppings, and delivery method.
 

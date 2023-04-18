@@ -1,20 +1,48 @@
-// After refactoring to follow DIP
-class PizzaPreparation {
-  constructor(ingredients) {
-    this.ingredients = ingredients;
-  }
-
+// Define a Pizza class that has all the methods needed for a pizza
+class Pizza {
   prepare() {
-    // code to prepare pizza using this.ingredients
+    console.log('Preparing pizza');
+  }
+  
+  bake() {
+    console.log('Baking pizza');
+  }
+  
+  cut() {
+    console.log('Cutting pizza');
+  }
+  
+  box() {
+    console.log('Boxing pizza');
   }
 }
 
-class IngredientSystem {
-  // code for ingredient system
+// Define a PizzaMaker class that takes a pizza object and makes a pizza
+class PizzaMaker {
+  constructor(pizza) {
+    this.pizza = pizza;
+  }
+  
+  makePizza() {
+    this.pizza.prepare();
+    this.pizza.bake();
+    this.pizza.cut();
+    this.pizza.box();
+  }
 }
 
-const ingredientSystem1 = new IngredientSystem();
-const ingredientSystem2 = new IngredientSystem();
-
-const pizzaPreparation1 = new PizzaPreparation(ingredientSystem1);
-const pizzaPreparation2 = new PizzaPreparation(ingredientSystem2);
+// Use the PizzaMaker class to make a cheese pizza
+const cheesePizza = new Pizza();
+cheesePizza.prepare = function() {
+  console.log('Preparing cheese pizza');
+};
+cheesePizza.bake = function() {
+  console.log('Baking cheese pizza');
+};
+cheesePizza.cut = function() {
+  console.log('Cutting cheese pizza');
+};
+cheesePizza.box = function() {
+  console.log('Boxing cheese pizza');
+};
+const pizzaMaker1

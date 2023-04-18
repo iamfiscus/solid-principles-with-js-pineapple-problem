@@ -11,7 +11,7 @@ class CheesePizza extends Pizza {
   }
 }
 
-class PepperoniPizza extends Pizza {
+class DetroitPizza extends Pizza {
   prepare() {
     // code to prepare pepperoni pizza
   }

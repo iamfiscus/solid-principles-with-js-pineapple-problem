@@ -1,48 +1,20 @@
-// Good example: Preparation responsibilities are separated
-class Dough {
-  make() {
-    // code to make dough
+class Pizza {
+  constructor() {
+    this.toppings = [];
   }
-}
 
-class Sauce {
-  add() {
-    // code to add sauce
+  addTopping(topping) {
+    this.toppings.push(topping);
   }
-}
 
-class Cheese {
-  add() {
-    // code to add cheese
+  removeTopping(topping) {
+    const index = this.toppings.indexOf(topping);
+    if (index !== -1) {
+      this.toppings.splice(index, 1);
+    }
   }
-}
 
-class Toppings {
-  add() {
-    // code to add toppings
-  }
-}
-
-class Oven {
   bake() {
-    // code to bake pizza
-  }
-}
-
-class PizzaPreparation {
-  constructor(dough, sauce, cheese, toppings, oven) {
-    this.dough = dough;
-    this.sauce = sauce;
-    this.cheese = cheese;
-    this.toppings = toppings;
-    this.oven = oven;
-  }
-
-  prepare() {
-    this.dough.make();
-    this.sauce.add();
-    this.cheese.add();
-    this.toppings.add();
-    this.oven.bake();
+    console.log("Baking pizza with toppings:", this.toppings);
   }
 }

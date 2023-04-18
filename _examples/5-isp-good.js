@@ -1,45 +1,69 @@
-// After refactoring to follow ISP
-class Pizza {
-  prepare() {
-    // code to prepare pizza
-  }
+// Define a PizzaInterface that specifies the methods needed for a pizza
+class PizzaInterface {
+  prepare() {}
+  bake() {}
+  cut() {}
+  box() {}
 }
 
-class CuttablePizza {
+// Define a CheesePizza class that implements the PizzaInterface
+class CheesePizza extends PizzaInterface {
+  prepare() {
+    console.log("Preparing cheese pizza");
+  }
+
+  bake() {
+    console.log("Baking cheese pizza");
+  }
+
   cut() {
-    // code to cut pizza
+    console.log("Cutting cheese pizza");
   }
-}
 
-class BoxablePizza {
   box() {
-    // code to box pizza
+    console.log("Boxing cheese pizza");
   }
 }
 
-class CheesePizza extends Pizza {
+// Define a PepperoniPizza class that implements the PizzaInterface
+class PepperoniPizza extends PizzaInterface {
   prepare() {
-    // code to prepare cheese pizza
+    console.log("Preparing pepperoni pizza");
+  }
+
+  bake() {
+    console.log("Baking pepperoni pizza");
+  }
+
+  cut() {
+    console.log("Cutting pepperoni pizza");
+  }
+
+  box() {
+    console.log("Boxing pepperoni pizza");
   }
 }
 
-class PepperoniPizza extends Pizza {
-  prepare() {
-    // code to prepare pepperoni pizza
+// Define a PizzaMaker class that takes a pizza object and makes a pizza
+class PizzaMaker {
+  constructor(pizza) {
+    this.pizza = pizza;
+  }
+
+  makePizza() {
+    this.pizza.prepare();
+    this.pizza.bake();
+    this.pizza.cut();
+    this.pizza.box();
   }
 }
 
-class HawaiianPizza extends Pizza {
-  prepare() {
-    // code to prepare Hawaiian pizza
-  }
-}
+// Use the PizzaMaker class to make a cheese pizza
+const cheesePizza = new CheesePizza();
+const pizzaMaker1 = new PizzaMaker(cheesePizza);
+pizzaMaker1.makePizza();
 
-class CuttableCheesePizza extends CheesePizza, CuttablePizza {}
-class BoxableCheesePizza extends CheesePizza, BoxablePizza {}
-
-class CuttablePepperoniPizza extends PepperoniPizza, CuttablePizza {}
-class BoxablePepperoniPizza extends PepperoniPizza, BoxablePizza {}
-
-class CuttableHawaiianPizza extends HawaiianPizza, CuttablePizza {}
-class BoxableHawaiianPizza extends HawaiianPizza, BoxablePizza {}
+// Use the PizzaMaker class to make a pepperoni pizza
+const pepperoniPizza = new PepperoniPizza();
+const pizzaMaker2 = new PizzaMaker(pepperoniPizza);
+pizzaMaker2.makePizza();

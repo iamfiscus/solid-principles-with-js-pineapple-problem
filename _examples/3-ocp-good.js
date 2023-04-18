@@ -1,39 +1,35 @@
-// After refactoring to follow OCP
 class Pizza {
-  prepare() {
-    // code to prepare pizza
+  constructor() {
+    this.toppings = [];
   }
-}
 
-class PizzaFactory {
-  static createPizza(type) {
-    switch(type) {
-      case "cheese":
-        return new CheesePizza();
-      case "pepperoni":
-        return new PepperoniPizza();
-      case "hawaiian":
-        return new HawaiianPizza();
-      default:
-        throw new Error("Invalid pizza type");
+  addTopping(topping) {
+    this.toppings.push(topping);
+  }
+
+  removeTopping(topping) {
+    const index = this.toppings.indexOf(topping);
+    if (index !== -1) {
+      this.toppings.splice(index, 1);
     }
   }
-}
 
-class CheesePizza extends Pizza {
-  prepare() {
-    // code to prepare cheese pizza
+  bake() {
+    console.log("Baking pizza with toppings:", this.toppings);
   }
 }
 
-class PepperoniPizza extends Pizza {
-  prepare() {
-    // code to prepare pepperoni pizza
+class DetroitPizza extends Pizza {
+  constructor() {
+    super();
+    this.addTopping("pepperoni");
   }
 }
 
-class HawaiianPizza extends Pizza {
-  prepare() {
-    // code to prepare Hawaiian pizza
+class PineapplePizza extends Pizza {
+  constructor() {
+    super();
+    this.addTopping("pineapple");
+    this.addTopping("spam");
   }
 }

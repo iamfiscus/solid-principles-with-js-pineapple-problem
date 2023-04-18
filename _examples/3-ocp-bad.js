@@ -1,8 +1,33 @@
-}
+class Pizza {
+  constructor() {
+    this.toppings = [];
+  }
 
-// We want to add a new pizza, but we need to change the existing code
-class HawaiianPizza extends Pizza {
-  prepare() {
-    // code to prepare Hawaiian pizza
+  addTopping(topping) {
+    this.toppings.push(topping);
+  }
+
+  removeTopping(topping) {
+    const index = this.toppings.indexOf(topping);
+    if (index !== -1) {
+      this.toppings.splice(index, 1);
+    }
+  }
+
+  bake() {
+    console.log("Baking pizza with toppings:", this.toppings);
+  }
+}
+class PizzaStore {
+  constructor() {
+    this.pizza = new Pizza();
+  }
+
+  orderPizza(toppings) {
+    this.pizza = new Pizza();
+    for (let i = 0; i < toppings.length; i++) {
+      this.pizza.addTopping(toppings[i]);
+    }
+    this.pizza.bake();
   }
 }

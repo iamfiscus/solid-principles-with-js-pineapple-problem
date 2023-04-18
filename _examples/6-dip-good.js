@@ -1,20 +1,32 @@
-// After refactoring to follow DIP
-class PizzaPreparation {
+class Pizza {
   constructor(ingredients) {
     this.ingredients = ingredients;
   }
+}
 
-  prepare() {
-    // code to prepare pizza using this.ingredients
+class PizzaMaker {
+  constructor(pizza) {
+    this.pizza = pizza;
+  }
+
+  makePizza() {
+    const ingredients = this.pizza.ingredients.join(", ");
+    console.log(`Making pizza with ${ingredients}`);
   }
 }
 
-class IngredientSystem {
-  // code for ingredient system
+class Customer {
+  constructor(pizzaMaker) {
+    this.pizzaMaker = pizzaMaker;
+  }
+
+  orderPizza() {
+    this.pizzaMaker.makePizza();
+  }
 }
 
-const ingredientSystem1 = new IngredientSystem();
-const ingredientSystem2 = new IngredientSystem();
+const pizza = new Pizza(["tomatoes", "cheese", "pepperoni"]);
+const pizzaMaker = new PizzaMaker(pizza);
+const customer = new Customer(pizzaMaker);
 
-const pizzaPreparation1 = new PizzaPreparation(ingredientSystem1);
-const pizzaPreparation2 = new PizzaPreparation(ingredientSystem2);
+customer.orderPizza();
