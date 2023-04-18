@@ -1,19 +1,19 @@
 // Define a Pizza class that has all the methods needed for a pizza
 class Pizza {
   prepare() {
-    console.log('Preparing pizza');
+    console.log("Preparing pizza");
   }
-  
+
   bake() {
-    console.log('Baking pizza');
+    console.log("Baking pizza");
   }
-  
+
   cut() {
-    console.log('Cutting pizza');
+    console.log("Cutting pizza");
   }
-  
+
   box() {
-    console.log('Boxing pizza');
+    console.log("Boxing pizza");
   }
 }
 
@@ -22,7 +22,7 @@ class PizzaMaker {
   constructor(pizza) {
     this.pizza = pizza;
   }
-  
+
   makePizza() {
     this.pizza.prepare();
     this.pizza.bake();
@@ -33,16 +33,15 @@ class PizzaMaker {
 
 // Use the PizzaMaker class to make a cheese pizza
 const cheesePizza = new Pizza();
-cheesePizza.prepare = function() {
-  console.log('Preparing cheese pizza');
+cheesePizza.prepare = function () {
+  console.log("Preparing cheese pizza");
 };
-cheesePizza.bake = function() {
-  console.log('Baking cheese pizza');
+cheesePizza.bake = function () {
+  console.log("Baking cheese pizza");
 };
-cheesePizza.cut = function() {
-  console.log('Cutting cheese pizza');
+cheesePizza.cut = function () {
+  console.log("Cutting cheese pizza");
 };
-cheesePizza.box = function() {
-  console.log('Boxing cheese pizza');
+cheesePizza.box = function () {
+  console.log("Boxing cheese pizza");
 };
-const pizzaMaker1
