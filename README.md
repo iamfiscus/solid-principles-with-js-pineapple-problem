@@ -11,7 +11,7 @@ git clone <https://github.com/iamfiscus/solid-priciples-with-js-pineapple-proble
 
 cd solid-priciples-with-js-pineapple-problem
 
-npm installsolid-priciples-with-js-pineapple-problem
+npm install
 ```
 To start the application, run the following command:
 
