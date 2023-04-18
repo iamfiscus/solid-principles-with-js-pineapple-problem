@@ -1,7 +1,10 @@
-Pizza App
-This is a pizza ordering application that demonstrates SOLID principles and metaprogramming in JavaScript.
+# The Pineapple Problem
+This is a pizza metaphor that demonstrates SOLID principles and metaprogramming in JavaScript.
+![Pizza Slice](/assets/pineapple-problem.png "Pizza Slice")
 
-Getting Started
+[Presentation](https://docs.google.com/presentation/d/1UyJhhxz0SjrF12_0TRCo_qW_-5Wx6kgmzsh3DsNyRRI/edit?usp=sharing)
+
+## Getting Started
 To get started, clone this repository and install the dependencies:
 
 ```
@@ -13,11 +16,11 @@ npm installsolid-priciples-with-js-pineapple-problem
 ```
 To start the application, run the following command:
 
-
 ``` bash
 node main.js
 ```
-Expected output
+
+### Expected output
 ```
 Alice is supervising:
 - Alice
@@ -49,7 +52,7 @@ Error: The following ingredients are not available: milk, rennet, spam, pineappl
 
 This will start the application and open it in your default browser. From there, you can order a pizza by selecting the type of pizza, toppings, and delivery method.
 
-Tests
+### Tests
 To run the tests for this application, run the following command:
 
 ``` bash
@@ -57,11 +60,11 @@ npm test
 ```
 This will run the Mocha tests for the application, which cover the pizza preparation and ordering process.
 
-Dependencies
+### Dependencies
 This application uses the following dependencies:
+TBD
 
-Lodash
-Contributing
+## Contributing
 Contributions are welcome! If you have any suggestions for improvements or would like to contribute to this application, please open an issue or submit a pull request.
 
 License
