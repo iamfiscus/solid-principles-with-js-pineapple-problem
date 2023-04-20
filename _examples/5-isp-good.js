@@ -1,69 +1,52 @@
-// Define a PizzaInterface that specifies the methods needed for a pizza
-class PizzaInterface {
-  prepare() {}
-  bake() {}
-  cut() {}
-  box() {}
-}
-
-// Define a CheesePizza class that implements the PizzaInterface
-class CheesePizza extends PizzaInterface {
-  prepare() {
-    console.log("Preparing cheese pizza");
+class Pizza {
+  constructor() {
+    this.toppings = [];
   }
 
-  bake() {
-    console.log("Baking cheese pizza");
+  addTopping(topping) {
+    this.toppings.push(topping);
   }
 
-  cut() {
-    console.log("Cutting cheese pizza");
-  }
-
-  box() {
-    console.log("Boxing cheese pizza");
+  removeTopping(topping) {
+    const index = this.toppings.indexOf(topping);
+    if (index !== -1) {
+      this.toppings.splice(index, 1);
+    }
   }
 }
 
-// Define a PepperoniPizza class that implements the PizzaInterface
-class PepperoniPizza extends PizzaInterface {
-  prepare() {
-    console.log("Preparing pepperoni pizza");
+class DetroitPizza extends Pizza {
+  constructor() {
+    super();
+    this.detroitToppings = [];
   }
 
-  bake() {
-    console.log("Baking pepperoni pizza");
+  addDetroitTopping(topping) {
+    this.detroitToppings.push(topping);
   }
 
-  cut() {
-    console.log("Cutting pepperoni pizza");
-  }
-
-  box() {
-    console.log("Boxing pepperoni pizza");
-  }
-}
-
-// Define a PizzaMaker class that takes a pizza object and makes a pizza
-class PizzaMaker {
-  constructor(pizza) {
-    this.pizza = pizza;
-  }
-
-  makePizza() {
-    this.pizza.prepare();
-    this.pizza.bake();
-    this.pizza.cut();
-    this.pizza.box();
+  removeDetroitTopping(topping) {
+    const index = this.detroitToppings.indexOf(topping);
+    if (index !== -1) {
+      this.detroitToppings.splice(index, 1);
+    }
   }
 }
 
-// Use the PizzaMaker class to make a cheese pizza
-const cheesePizza = new CheesePizza();
-const pizzaMaker1 = new PizzaMaker(cheesePizza);
-pizzaMaker1.makePizza();
+class HawaiianPizza extends Pizza {
+  constructor() {
+    super();
+    this.meatToppings = [];
+  }
 
-// Use the PizzaMaker class to make a pepperoni pizza
-const pepperoniPizza = new PepperoniPizza();
-const pizzaMaker2 = new PizzaMaker(pepperoniPizza);
-pizzaMaker2.makePizza();
+  addHawaiianTopping(topping) {
+    this.meatToppings.push(topping);
+  }
+
+  removeHawaiianTopping(topping) {
+    const index = this.meatToppings.indexOf(topping);
+    if (index !== -1) {
+      this.meatToppings.splice(index, 1);
+    }
+  }
+}

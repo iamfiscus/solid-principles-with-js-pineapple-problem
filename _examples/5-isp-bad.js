@@ -1,47 +1,32 @@
-// Define a Pizza class that has all the methods needed for a pizza
 class Pizza {
-  prepare() {
-    console.log("Preparing pizza");
+  constructor() {
+    this.toppings = [];
   }
 
-  bake() {
-    console.log("Baking pizza");
+  addTopping(topping) {
+    this.toppings.push(topping);
   }
 
-  cut() {
-    console.log("Cutting pizza");
+  removeTopping(topping) {
+    const index = this.toppings.indexOf(topping);
+    if (index !== -1) {
+      this.toppings.splice(index, 1);
+    }
   }
 
-  box() {
-    console.log("Boxing pizza");
-  }
-}
-
-// Use the PizzaMaker class to make a cheese pizza
-const cheesePizza = new Pizza();
-cheesePizza.prepare = function () {
-  console.log("Preparing cheese pizza");
-};
-cheesePizza.bake = function () {
-  console.log("Baking cheese pizza");
-};
-cheesePizza.cut = function () {
-  console.log("Cutting cheese pizza");
-};
-cheesePizza.box = function () {
-  console.log("Boxing cheese pizza");
-};
-
-// Define a PizzaMaker class that takes a pizza object and makes a pizza
-class PizzaMaker {
-  constructor(pizza) {
-    this.pizza = pizza;
+  addDetroitTopping(topping) {
+    // code to add Detroit topping
   }
 
-  makePizza() {
-    this.pizza.prepare();
-    this.pizza.bake();
-    this.pizza.cut();
-    this.pizza.box();
+  removeDetroitTopping(topping) {
+    // code to remove Detroit topping
+  }
+
+  addHawiianTopping(topping) {
+    // code to add Hawiian topping
+  }
+
+  removeHawiianTopping(topping) {
+    // code to remove Hawiian topping
   }
 }
