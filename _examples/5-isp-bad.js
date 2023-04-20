@@ -17,20 +17,6 @@ class Pizza {
   }
 }
 
-// Define a PizzaMaker class that takes a pizza object and makes a pizza
-class PizzaMaker {
-  constructor(pizza) {
-    this.pizza = pizza;
-  }
-
-  makePizza() {
-    this.pizza.prepare();
-    this.pizza.bake();
-    this.pizza.cut();
-    this.pizza.box();
-  }
-}
-
 // Use the PizzaMaker class to make a cheese pizza
 const cheesePizza = new Pizza();
 cheesePizza.prepare = function () {
@@ -45,3 +31,17 @@ cheesePizza.cut = function () {
 cheesePizza.box = function () {
   console.log("Boxing cheese pizza");
 };
+
+// Define a PizzaMaker class that takes a pizza object and makes a pizza
+class PizzaMaker {
+  constructor(pizza) {
+    this.pizza = pizza;
+  }
+
+  makePizza() {
+    this.pizza.prepare();
+    this.pizza.bake();
+    this.pizza.cut();
+    this.pizza.box();
+  }
+}

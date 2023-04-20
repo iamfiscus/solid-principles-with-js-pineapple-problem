@@ -11,6 +11,16 @@ const chefs = [headChef, assistantChef1, assistantChef2];
 // Move supervise method from Chef to HeadChef
 headChef.supervise(chefs);
 
+const tasks = [
+  { task: "prepareDough", chef: assistantChef1 },
+  { task: "addSauce", chef: assistantChef2 },
+  { task: "addCheese", chef: assistantChef1 },
+  { task: "prepareToppings", chef: assistantChef2 },
+  { task: "assemblePizza", chef: headChef },
+  { task: "bake", chef: headChef },
+];
+headChef.assignTasks(tasks); // assigns tasks to assistant chefs
+
 // Make a Pizza: createPizza method from PizzaFactory to Pizza class
 export const detroit = {
   dough: {
