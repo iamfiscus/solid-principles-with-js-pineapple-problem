@@ -22,7 +22,7 @@ const tasks = [
 headChef.assignTasks(tasks); // assigns tasks to assistant chefs
 
 // Make a Pizza: createPizza method from PizzaFactory to Pizza class
-export const detroit = {
+const detroit = {
   dough: {
     type: "pan",
     ingredients: ["flour", "water", "salt"],
